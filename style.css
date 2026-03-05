@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+    --primary-color: #1a237e;
+    /* Navy Blue */
+    --secondary-color: #ffd700;
+    /* Gold */
+    --accent-color: #ff5722;
+    --text-dark: #333;
+    --text-light: #fff;
+    --bg-light: #f4f7f6;
+    --glass-bg: rgba(255, 255, 255, 0.9);
+    --bot-msg-bg: #e8eaf6;
+    --user-msg-bg: #1a237e;
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Landing Page Styles */
+header {
+    background: white;
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-dark);
+    margin-left: 2rem;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--primary-color);
+}
+
+.btn-apply {
+    background: var(--primary-color);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.hero {
+    height: 90vh;
+    background: linear-gradient(rgba(26, 35, 126, 0.7), rgba(0, 0, 0, 0.5)), url('hero_bg.png');
+    /* Fallback or relative path */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding-top: 80px;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    animation: fadeInUp 1s ease;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin-bottom: 2rem;
+    animation: fadeInUp 1.2s ease;
+}
+
+.features {
+    padding: 5rem 10%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    background: white;
+}
+
+.feature-card {
+    padding: 2rem;
+    text-align: center;
+    border-radius: 15px;
+    background: var(--bg-light);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow);
+}
+
+.feature-card i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* Chatbox Styling */
+.chatbox {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 9999;
+}
+
+/* BUTTON */
+.chatbox__button button {
+    padding: 15px;
+    background: var(--secondary-color);
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chatbox__button button:hover {
+    transform: scale(1.1);
+}
+
+.chatbox__button img {
+    width: 30px;
+    height: 30px;
+}
+
+/* CHATBOX SUPPORT */
+.chatbox__support {
+    display: flex;
+    flex-direction: column;
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    width: 380px;
+    height: 500px;
+    z-index: -1;
+    opacity: 0;
+    transition: all .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform: scale(0.8) translateY(100px);
+    box-shadow: var(--shadow);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    overflow: hidden;
+    position: absolute;
+    bottom: 80px;
+    right: 0;
+}
+
+.chatbox--active {
+    opacity: 1;
+    z-index: 10000;
+    transform: scale(1) translateY(0);
+}
+
+/* HEADER */
+.chatbox__header {
+    background: var(--primary-color);
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    color: white;
+}
+
+.chatbox__image--header {
+    margin-right: 15px;
+    background: white;
+    border-radius: 50%;
+    padding: 5px;
+    width: 45px;
+    height: 45px;
+}
+
+.chatbox__heading--header {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.chatbox__description--header {
+    font-size: 0.8rem;
+    opacity: 0.8;
+}
+
+/* MESSAGES */
+.chatbox__messages {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.messages__item {
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    max-width: 80%;
+    font-size: 0.9rem;
+    position: relative;
+    animation: fadeIn 0.3s ease;
+}
+
+.messages__item--visitor {
+    background: var(--bot-msg-bg);
+    color: var(--text-dark);
+    align-self: flex-start;
+    border-bottom-left-radius: 0;
+}
+
+.messages__item--operator {
+    background: var(--user-msg-bg);
+    color: white;
+    align-self: flex-end;
+    border-bottom-right-radius: 0;
+}
+
+/* FOOTER */
+.chatbox__footer {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background: white;
+    border-top: 1px solid #eee;
+}
+
+.chatbox__footer input {
+    flex: 1;
+    border: 1px solid #ddd;
+    padding: 12px 20px;
+    border-radius: 25px;
+    margin-right: 10px;
+    outline: none;
+    font-family: inherit;
+    transition: border-color 0.3s;
+}
+
+.chatbox__footer input:focus {
+    border-color: var(--primary-color);
+}
+
+.send__button {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.send__button:hover {
+    background: #0d125a;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+footer {
+    background: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vidhya Peetha | Premium Education Admissions</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">Vidhya Peetha</div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#campus">Campus Tour</a>
+            <a href="#admissions">Admissions</a>
+            <a href="#" class="btn-apply">Apply Now</a>
+        </nav>
+    </header>
+
+    <main id="home">
+        <section class="hero"
+            style="background: linear-gradient(rgba(26, 35, 126, 0.7), rgba(0, 0, 0, 0.5)), url('{{ url_for('static', filename='images/hero_bg.png') }}'); background-size: cover; background-position: center;">
+            <h1>Vidhya Peetha</h1>
+            <p>Nurturing minds, fostering values, and leading the way in academic excellence. Experience the future of
+                learning.</p>
+            <div class="hero-btns">
+                <a href="#campus" class="btn-apply"
+                    style="background: var(--secondary-color); color: var(--text-dark);">Explore Campus</a>
+                <a href="#" class="btn-apply" style="margin-left: 10px;">Enrol Now</a>
+            </div>
+        </section>
+
+        <!-- Campus Highlights -->
+        <section class="features" id="campus" style="background: #fff; padding: 5rem 5%;">
+            <div style="text-align: center; margin-bottom: 3rem; width: 100%;">
+                <h2 style="font-size: 2.5rem; color: var(--primary-color);">Interactive Campus Tour</h2>
+                <p>Take a virtual stroll through our state-of-the-art facilities</p>
+            </div>
+
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; width: 100%;">
+                <!-- Computer Lab -->
+                <div class="feature-card" style="padding: 0; overflow: hidden; position: relative;">
+                    <img src="{{ url_for('static', filename='images/computer_lab.png') }}" alt="Computer Lab"
+                        style="width: 100%; height: 250px; object-fit: cover;">
+                    <div style="padding: 1.5rem;">
+                        <h3>Innovation Lab</h3>
+                        <p>Our futuristic computer lab equipped with the latest technology for coding, robotics, and
+                            design.</p>
+                        <button class="btn-apply"
+                            style="padding: 0.5rem 1rem; font-size: 0.8rem; margin-top: 10px;">Watch VR Tour</button>
+                    </div>
+                </div>
+
+                <!-- Playground -->
+                <div class="feature-card" style="padding: 0; overflow: hidden;">
+                    <img src="{{ url_for('static', filename='images/sports_ground.png') }}" alt="Sports Ground"
+                        style="width: 100%; height: 250px; object-fit: cover;">
+                    <div style="padding: 1.5rem;">
+                        <h3>Elite Sports Ground</h3>
+                        <p>A professional-grade sports complex with an Olympic-sized football field and running tracks.
+                        </p>
+                        <button class="btn-apply"
+                            style="padding: 0.5rem 1rem; font-size: 0.8rem; margin-top: 10px;">Drone View</button>
+                    </div>
+                </div>
+
+                <!-- Main Campus -->
+                <div class="feature-card" style="padding: 0; overflow: hidden;">
+                    <img src="{{ url_for('static', filename='images/campus_tour.png') }}" alt="Campus"
+                        style="width: 100%; height: 250px; object-fit: cover;">
+                    <div style="padding: 1.5rem;">
+                        <h3>Main Entrance & Campus</h3>
+                        <p>A heritage-inspired modern building designed for a sustainable and inspiring learning
+                            environment.</p>
+                        <button class="btn-apply"
+                            style="padding: 0.5rem 1rem; font-size: 0.8rem; margin-top: 10px;">Interactive Walk</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features" id="about">
+            <div class="feature-card">
+                <i class="fas fa-graduation-cap"></i>
+                <h3>Holistic Education</h3>
+                <p>Blending CBSE standards with global interactive learning methods.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-bus"></i>
+                <h3>Safe & Smart Transport</h3>
+                <p>GPS-enabled premium school buses covering all major city routes.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Secure Campus</h3>
+                <p>24/7 CCTV surveillance and verified security staff for complete peace of mind.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Chatbot UI -->
+    <div class="container">
+        <div class="chatbox">
+            <div class="chatbox__support">
+                <div class="chatbox__header">
+                    <div class="chatbox__image--header">
+                        <img src="https://img.icons8.com/color/48/000000/school.png" alt="avatar">
+                    </div>
+                    <div class="chatbox__content--header">
+                        <h4 class="chatbox__heading--header">Vidhya Peetha Support</h4>
+                        <p class="chatbox__description--header">Hello! I'm Shanky. How can I help with admissions?</p>
+                    </div>
+                </div>
+                <div class="chatbox__messages">
+                    <div></div>
+                </div>
+                <div class="chatbox__footer">
+                    <input type="text" placeholder="Ask about fees, bus, hostel, admissions...">
+                    <button class="chatbox__send--footer send__button">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="chatbox__button">
+                <button>
+                    <img src="{{ url_for('static', filename='images/chatbox-icon.svg') }}" alt="chat icon" />
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Vidhya Peetha International School. All Rights Reserved. <br> Powered by Vidhya Peetha Admissions
+            Portal.</p>
+    </footer>
+
+    <script>
+        $SCRIPT_ROOT = {{ request.script_root | tojson }};
+    </script>
+    <script type="text/javascript" src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+
+</html>
