@@ -1,0 +1,253 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "Hey",
+        "Hello",
+        "Good day",
+        "Greetings",
+        "Is anyone there?",
+        "How are you"
+      ],
+      "responses": [
+        "Hello! Welcome to the School Admissions Portal. How can I assist you today?",
+        "Hi there! I'm here to help you with school admission queries.",
+        "Greetings! How can I help you with your school inquiry today?"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "Bye",
+        "Goodbye",
+        "See you later",
+        "Take care"
+      ],
+      "responses": [
+        "Goodbye! Feel free to reach out if you have more questions about admissions.",
+        "Have a great day! Hope to see you at our school soon.",
+        "Bye! Best of luck with the admission process."
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": [
+        "Thanks",
+        "Thank you",
+        "That's helpful",
+        "Much appreciated"
+      ],
+      "responses": [
+        "You're welcome!",
+        "Happy to help!",
+        "My pleasure. Let me know if you need anything else."
+      ]
+    },
+    {
+      "tag": "admission_process",
+      "patterns": [
+        "How can I apply for admission?",
+        "What is the admission process?",
+        "Steps for school admission",
+        "How to get admission here?",
+        "Registration for new students"
+      ],
+      "responses": [
+        "The admission process is: Online registration → Entrance test/interaction → Document verification → Fee payment.",
+        "You can apply through our website and complete the admission form.",
+        "Register online, attend the interaction session, submit documents, and confirm admission."
+      ]
+    },
+    {
+      "tag": "documents_required",
+      "patterns": [
+        "What documents are needed?",
+        "Documents for admission",
+        "Certificates required",
+        "Paperwork for school"
+      ],
+      "responses": [
+        "Required documents: Birth Certificate, Aadhaar Card, Transfer Certificate, last academic report card, and passport photos.",
+        "Please bring Birth Certificate, residence proof, previous school certificate, and photographs."
+      ]
+    },
+    {
+      "tag": "fees_structure",
+      "patterns": [
+        "What is the fee structure?",
+        "Admission fee",
+        "How much are the fees?",
+        "Monthly fee",
+        "School fees details"
+      ],
+      "responses": [
+        "The fee structure includes Admission Fee ₹25,000 (one-time), Annual Fee ₹10,000, and Monthly Tuition Fee starting from ₹5,000.",
+        "For new admissions: Admission Fee ₹25,000, Security Deposit ₹5,000 (refundable), and Tuition Fee ₹5,000–₹7,500 depending on grade.",
+        "Primary classes start at ₹5,000 per month plus annual charges."
+      ]
+    },
+    {
+      "tag": "age_criteria",
+      "patterns": [
+        "Age limit for nursery",
+        "Age criteria for admission",
+        "Minimum age for school",
+        "Child age for kindergarten"
+      ],
+      "responses": [
+        "Nursery requires age 3+ years, LKG 4+, UKG 5+, and Grade 1 requires 6+ years.",
+        "The age is calculated as of March 31 of the admission year."
+      ]
+    },
+    {
+      "tag": "school_timings",
+      "patterns": [
+        "School timings",
+        "When does school start",
+        "School hours",
+        "Reporting time"
+      ],
+      "responses": [
+        "Pre-primary timing: 8:30 AM to 12:30 PM. Grade 1 onwards: 8:00 AM to 2:30 PM.",
+        "School operates Monday to Friday from 8:00 AM to 2:30 PM."
+      ]
+    },
+    {
+      "tag": "curriculum",
+      "patterns": [
+        "Which curriculum",
+        "Is it CBSE",
+        "School board",
+        "Education board"
+      ],
+      "responses": [
+        "We follow the CBSE curriculum with focus on academics and extracurricular development.",
+        "Our curriculum encourages practical learning and innovation."
+      ]
+    },
+    {
+      "tag": "extracurriculars",
+      "patterns": [
+        "Activities available",
+        "Sports and clubs",
+        "Music and dance",
+        "Extracurricular activities"
+      ],
+      "responses": [
+        "Students can participate in sports, music, dance, robotics, and art programs.",
+        "We offer activities like football, basketball, coding club, music, and debate."
+      ]
+    },
+    {
+      "tag": "transport",
+      "patterns": [
+        "Do you provide bus",
+        "School transport",
+        "Bus facility",
+        "Transport service"
+      ],
+      "responses": [
+        "Yes, school buses cover major areas of the city.",
+        "Bus fees range from ₹1500 to ₹3000 depending on the distance."
+      ]
+    },
+    {
+      "tag": "hostel",
+      "patterns": [
+        "Hostel facility",
+        "Boarding facility",
+        "Student hostel"
+      ],
+      "responses": [
+        "Yes, hostel facilities are available for boys and girls.",
+        "Hostel fee is approximately ₹60,000 per year including accommodation and meals."
+      ]
+    },
+    {
+      "tag": "scholarship",
+      "patterns": [
+        "Scholarships available",
+        "Fee concession",
+        "Financial aid"
+      ],
+      "responses": [
+        "Yes, merit scholarships offer up to 50% tuition fee waiver.",
+        "Students with excellent academic performance can apply for scholarships."
+      ]
+    },
+    {
+      "tag": "safety",
+      "patterns": [
+        "Is the school safe",
+        "Security in school",
+        "CCTV cameras"
+      ],
+      "responses": [
+        "The campus is secured with CCTV surveillance and trained security staff.",
+        "Student safety is our highest priority."
+      ]
+    },
+    {
+      "tag": "sports",
+      "patterns": [
+        "Sports facilities",
+        "Playground",
+        "Sports training"
+      ],
+      "responses": [
+        "We provide football, cricket, basketball, athletics, and indoor games.",
+        "Professional coaches guide students in sports activities."
+      ]
+    },
+    {
+      "tag": "library",
+      "patterns": [
+        "School library",
+        "Library facility",
+        "Books available"
+      ],
+      "responses": [
+        "Our school library has over 10,000 books and digital resources.",
+        "Students can borrow books and use the reading hall."
+      ]
+    },
+    {
+      "tag": "computer_lab",
+      "patterns": [
+        "Computer lab",
+        "Coding classes",
+        "Technology education"
+      ],
+      "responses": [
+        "Students learn coding, robotics, and digital skills in our modern computer labs.",
+        "Technology education is part of the curriculum."
+      ]
+    },
+    {
+      "tag": "events",
+      "patterns": [
+        "School events",
+        "Annual day",
+        "Cultural activities"
+      ],
+      "responses": [
+        "We celebrate annual day, sports day, science fairs, and cultural festivals.",
+        "Students participate in competitions and exhibitions."
+      ]
+    },
+    {
+      "tag": "contact",
+      "patterns": [
+        "School contact",
+        "Phone number",
+        "School location"
+      ],
+      "responses": [
+        "You can contact us at +91 98765 43210 or email vidhyapeethaadmissions@gmail.com.",
+        "Our campus is located in Whitefield,Bangalore."
+      ]
+    }
+  ]
+}
